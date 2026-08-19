@@ -1,0 +1,44 @@
+b{
+    font-size:20px;
+    color:darkred;
+}
+h1{
+    background-color: darkgoldenrod;
+}
+body{
+    background-color: hotpink;
+}
+button{
+    background-color: brown;
+}
+h2{
+    background-color: blueviolet;
+    color:white;
+}
+#box{
+    background-color: chartreuse;
+    color:black;
+}
+.lorem{
+    background-color: chocolate;
+    height:100px;
+    width:500px;
+}
+.newLorem{
+    color:brown;
+    font-size:larger;
+}
+#event{
+    height:50px;
+    width:100px;
+    background-color: burlywood;
+    border: 2px solid black;
+}
+.dark{
+    background-color: black;
+    color:white;
+}
+.light{
+    background-color:white;
+    color:black;
+}
