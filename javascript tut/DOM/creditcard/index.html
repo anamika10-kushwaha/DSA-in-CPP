@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website for credit card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="card-container">
+        <div class="front">
+            <div class="image">
+                <img src="chip.png" alt="">
+                <img src="visa.png" alt="">
+            </div>
+            <div class="card-number-box">################</div>
+            <div class="flexbox">
+                <div class="box">
+                    <span>card holder</span>
+                    <div class="card-holder-number">full name</div>
+                </div>
+                <div class="box">
+                    <span>expires</span>
+                    <div class="expiration">
+                        <span class="exp-month">mm</span>
+                        <span class="exp-year">yy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back">
+            <div class="stripe"></div>
+            <div class="box">
+                <span>cvv</span>
+                <div class="cvv-box"></div>
+                <img src="visa.png" alt="">
+            </div>
+        </div>
+    </div>
+        <form action="">
+            <div class="inputbox">
+                <span>CARD NUMBER</span>
+                <input type="text" maxlength="16" class="card-number">
+            </div>
+            <div class="inputbox">
+            <span>CARD HOLDER</span>
+            <input type="text" class="card-holder">
+            </div>
+            <div class="flexbox">
+                <div class="inputbox">
+                <span>EXPIRATION MM</span>
+                <select placeholder="month" class="month">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                </select>
+                </div>
+                <div class="inputbox">
+                <span>EXPIRATION YY</span>
+                <select placeholder="year" class="year">
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+                </select>
+                </div>
+                <div class="inputbox">
+                    <span>CVV</span>
+                    <input type="text" maxlength="4" class="cvv"> 
+                </div>
+            </div>
+            <input type="submit" class="submit" value="submit">
+             <!-- <button class="submit">submit</button> -->
+        </form>
+    </div>
+
+<script>
+    document.querySelector(".card-number").oninput= () =>{
+        document.querySelector(".card-number-box").innerText = document.querySelector(".card-number").value;
+    }
+
+    document.querySelector(".card-holder").oninput= () =>{
+        document.querySelector(".card-holder-number").innerText = document.querySelector(".card-holder").value;
+    }
+
+    document.querySelector(".month").oninput= () =>{
+        document.querySelector(".exp-month").innerText = document.querySelector(".month").value;
+    }
+
+    document.querySelector(".year").oninput= () =>{
+        document.querySelector(".exp-year").innerText = document.querySelector(".year").value;
+    }
+
+    document.querySelector(".cvv").onmouseenter= () =>{
+        document.querySelector(".front").style.transform = "perspective(1000px) rotateY(-180deg)";
+        document.querySelector(".back").style.transform = "perspective(1000px) rotateY(0deg)";
+    }
+
+    document.querySelector(".cvv").onmouseleave= () =>{
+        document.querySelector(".front").style.transform = "perspective(1000px) rotateY(0deg)";
+        document.querySelector(".back").style.transform = "perspective(1000px) rotateY(180deg)";
+    }
+
+    document.querySelector(".cvv").oninput= () =>{
+        document.querySelector(".cvv-box").innerText =  document.querySelector(".cvv").value;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
